@@ -1,8 +1,13 @@
 ## Fast build with vs code
-open terminal
-yarn add @truffle/hdwallet-provider
-yarn add dotenv
-yarn add truffle-plugin-verify
+* open terminal
+* yarn add @truffle/hdwallet-provider
+* yarn add dotenv
+* yarn add truffle-plugin-verify
+* truffle migrate --reset --network mumbai
+---
+* truffle run verify NFTMarket@0x61573080cc5f932C7D6C8f2709FD9370Be65d922 --network mumbai
+* truffle run verify NFT@0x64A09C4aD9dC62C07Abf735a71Ad9bD8b75c3c2e --network mumbai
+* truffle run verify Migrations@0x15DCa67835012A0d48213c5B7D6de252749Ac817 --network mumbai
 # Verify with telos
 
 

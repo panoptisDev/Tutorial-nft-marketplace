@@ -4,7 +4,7 @@ import {WalletLinkConnector} from '@web3-react/walletlink-connector';
 
 require('dotenv').config();
 
-const supportChainIdList = [1, 3, 4, 5, 42, 137, 1337, 80001];
+const supportChainIdList = [1, 3, 4, 5, 40, 41, 42, 137, 1337, 80001];
 
 const getRpcEndpoint = (chainId) => {
   const endpoints = {
@@ -12,6 +12,8 @@ const getRpcEndpoint = (chainId) => {
     3: 'ropsten',
     4: 'rinkeby',
     5: 'goerli',
+    40: 'telos',
+    41: 'telostest',
     42: 'kovan',
     137: 'polygon',
     80001: 'mumbai',
