@@ -1,3 +1,11 @@
+## Fast build with vs code
+open terminal
+yarn add @truffle/hdwallet-provider
+yarn add dotenv
+yarn add truffle-plugin-verify
+# Verify with telos
+
+
 # NFT Tutorial - NFT Marketplace
 
 Build an NFT marketplace from 0. How to compile, deploy, and call smart contract

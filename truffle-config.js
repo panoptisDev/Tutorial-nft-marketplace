@@ -1,3 +1,4 @@
+//PanoptisDev Truffle-config
 require('dotenv').config();
 
 const mnemonic = process.env.MNEMONIC;
@@ -24,8 +25,28 @@ module.exports = {
       confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: true
+    },
+    telos: {
+      provider: new HDWalletProvider(mnemonic, process.env.TELOS_RPC),
+      network_id: 40,
+      confirmations: 4,
+      timeoutBlocks: 2000,
+      skipDryRun: true
+    },
+    telostest: {
+      provider: new HDWalletProvider(mnemonic, process.env.TELOS_TEST_RPC),
+      network_id: 41,
+      confirmations: 4,
+      timeoutBlocks: 2000,
+      skipDryRun: true
     }
 
+  },
+  plugins: [
+    'truffle-plugin-verify'
+  ],
+  api_keys: {
+    polygonscan: process.env.POLYGONSCAN_API_KEY,
   },
   contracts_directory: './src/contracts/',
   contracts_build_directory: './src/abis/',
